@@ -16,9 +16,8 @@ $tar = query("SELECT * FROM taruna WHERE id = $id")[0];
     <title>CRUD PHP Native</title>
 
     <!-- Style Files -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href=vendor/boxicons/css/boxicons.min.css">
 </head>
 
 <body>

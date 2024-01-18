@@ -15,7 +15,6 @@ $taruna = query("SELECT * FROM taruna");
     <!-- Style Files -->
     <link rel="stylesheet" href="src/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="src/vendor/boxicons/css/boxicons.min.css">
-    <link rel="stylesheet" href="src/css/style.css">
 </head>
 
 <body>
