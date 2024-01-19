@@ -1,6 +1,10 @@
 <?php
 include "src/functions.php";
 $taruna = query("SELECT * FROM taruna");
+
+if (isset($_POST['search'])) {
+    $taruna = search($_POST['keyword']);
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +28,21 @@ $taruna = query("SELECT * FROM taruna");
                 <h1 class="fw-bold text-center pt-5 text-success">Data Taruna RPL</h1>
                 <p class="text-center">PHP Native CRUD</p>
 
-                <a href="src/add.php" class="btn btn-success text-center mb-2"><i class='bx bx-plus-circle' style="line-height: 0;"></i> Tambah</a>
+                <div class="row">
+                    <div class="col-2">
+                        <a href="src/add.php" class="btn btn-success text-center mb-2"><i class='bx bx-plus-circle' style="line-height: 0;"></i> Tambah</a>
+                    </div>
+                    <div class="col-4">
+                        <form action="" method="post">
+                            <div class="input-group rounded">
+                                <input type="text" class="form-control" placeholder="Cari.." aria-label="Search" aria-describedby="search-addon" name="keyword" autofocus autocomplete="off" />
+                                <button class="input-group-text border-0" id="search-addon" name="search">
+                                    <i class="bx bx-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
                 <div class='alert alert-danger d-none' id="alertFailed" role='alert'>
                     Data gagal ditambahkan!
                 </div>
